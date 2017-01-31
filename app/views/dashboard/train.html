@@ -1,0 +1,36 @@
+<div>
+	<h2 class="templatehead"
+		style="background-color: #3ca2e0; padding: 25px; color:white">Training</h2>
+	<hr>
+
+	<form>
+		<b> Enter input: </b><br> <input type="text" name="inputtext"
+			ng-model="inputtext" class="inputText"> <br>
+		<button class="btn btn-default" type="button" id="ask" ng-click = sendInput()>Ask</button>
+		<button class="btn btn-default" type="button" id="clear">Clear</button>
+	</form>
+	<br> <br>
+	<p id=responsetext">Response: aaa</p>
+	<br> <br>
+	<button class="btn btn-default" type="button" id="addalternate"
+		ng-click="showAddResponseForm()">Add alternate response</button>
+
+	<form id=AddResponseForm style="visibility: hidden;">
+        <fieldset  data-ng-repeat="choice in choices">
+            <input type="text" ng-model="choice.name" class="inputText" name="" placeholder="Enter text">
+            <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+            <br>
+        </fieldset>
+
+        <button class="addfields btn btn-default" ng-click="addNewChoice()">Add fields</button>
+		<!--<b> Enter a text response: </b><br> <input type="text"-->
+			<!--name="inputresponse" ng-model="inputresponse0"> &nbsp; <br>-->
+		<!--<br>-->
+		<!--<button class="btn btn-default" type="button" id="addresp"-->
+			<!--ng-click=addnewresp()>Add New</button>-->
+		<!--<br> <br>-->
+        <br>
+		<button class="btn btn-default" type="button" id="save" ng-click = sendNewResponses()>Save</button>
+
+	</form>
+</div>

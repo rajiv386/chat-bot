@@ -1,0 +1,28 @@
+<div>
+<h2 class="templatehead" style = "background-color:#3ca2e0; padding: 25px; color:white">Chatbox</h2>
+<hr>
+<div style="bottom:80px; position:absolute;">
+<input type="text" name="chat" id="chatbox" class ="inputText"
+	placeholder="Hi there! Type here to talk to me." ng-model = "userInput">
+	<button type="button" id = "send" ng-click = sendUserChatInput()>Send</button>    <!--sendInput()-->
+	</div>
+<div>
+<br>
+
+<div class="userchat">
+	<p id="chatlog" class="chatlog"  style="bottom:100px; position:absolute;">
+	{{chatlog}}
+	</p>
+	<p id="demochat" class="chatLog" style = "opacity: 0.4; bottom:100px; position:absolute;">
+
+			Hi<br> <b>Chatbot:</b> Howdy! <br> name<br> <b>Chatbot:</b>My
+								name is Chatbot<br> Test<br> <b>Chatbot:</b> I'm
+								confused<br>
+
+	</p>
+</div>
+
+    <p>{{myGetVar}}</p>
+
+</div>
+</div>
